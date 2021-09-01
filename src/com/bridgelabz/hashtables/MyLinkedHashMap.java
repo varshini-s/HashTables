@@ -31,6 +31,30 @@ public class MyLinkedHashMap<K,V>
 		return (myMapNode==null)? null : myMapNode.getValue();
 		
 	}
+	
+	public void add(K key,V value)
+	{
+		int index=this.getBucketIndex(key);
+		MyLinkedList<K> myLinkedList=this.myBucketArray.get(index);
+		if(myLinkedList==null)
+		{
+			myLinkedList = new MyLinkedList<>();
+			this.myBucketArray.set(index, myLinkedList);
+		}
+		
+		MyMapNode<K, V> myMapNode = (MyMapNode<K, V>) myLinkedList.search(key);
+		if(myMapNode==null)
+		{
+			myMapNode= new MyMapNode<>(key,value);
+			myLinkedList.appendNode(myMapNode);
+			
+		}
+		else
+		{
+			myMapNode.setValue(value);
+		}
+		
+	}
 
 	private int getBucketIndex(K key) 
 	
