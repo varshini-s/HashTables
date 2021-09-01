@@ -20,5 +20,25 @@ public class MyHashMap<K,V>
 		return (myMapNode==null)? null : myMapNode.getValue();
 	}
 	
+	public void add(K key,V value) 
+	{
+		MyMapNode<K, V> newNode= (MyMapNode<K, V>) this.myLinkedList.search(key);
+		if(newNode==null)
+		{
+			newNode=new MyMapNode<>(key,value);
+			this.myLinkedList.appendNode(newNode);
+		}
+		else
+		{
+			newNode.setValue(value);
+		}
+		
+		
+	}
+	
+	public String toString()
+	{
+		return "MYHashMapNodes{"+ myLinkedList+'}';
+	}
 
 }
