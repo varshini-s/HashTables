@@ -58,8 +58,8 @@ public class MyMapNode<K,V> implements INodeIF<K>
 	public String toString()
 	{
 		StringBuilder myMapNodesString = new StringBuilder();
-		myMapNodesString.append("MyMapNode("+"K=").append(key)
-						.append("V=").append(value).append("}");
+		myMapNodesString.append("MyMapNode("+"K=").append(this.key)
+						.append(" V=").append(value).append("}");
 		
 		if(next!=null)
 		{
