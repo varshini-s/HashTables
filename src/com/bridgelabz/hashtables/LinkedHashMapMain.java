@@ -28,6 +28,8 @@ public class LinkedHashMapMain
 		System.out.println(myLinkedHashMap);
 		int frequency=myLinkedHashMap.get("paranoid");
 		System.out.println(frequency);
+		myLinkedHashMap.remove("they");
+		System.out.println(myLinkedHashMap);
 	}
 
 
