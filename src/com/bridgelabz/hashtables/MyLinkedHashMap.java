@@ -55,15 +55,22 @@ public class MyLinkedHashMap<K,V>
 		}
 		
 	}
+	
+	public String toString()
+	{
+		return "MyLinkedHashMap List{" + myBucketArray +'}';
+	}
 
 	private int getBucketIndex(K key) 
 	
 	{
 		int hashCode= Math.abs(key.hashCode());
 		int index=hashCode%numBuckets;
-		System.out.println("key:"+key+" hashcode: "+hashCode +" index: "+index);
+		//System.out.println("key:"+key+" hashcode: "+hashCode +" index: "+index);
 		return index;
 	}
+	
+	
 	
 
 }
