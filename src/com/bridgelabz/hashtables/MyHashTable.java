@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 import com.bridgelabz.linkedlist.MyLinkedList;
 
-public class MyLinkedHashMap<K,V> 
+public class MyHashTable<K,V> 
 {
 	private final int numBuckets;
 	ArrayList<MyLinkedList<K>> myBucketArray;
 	
-	public MyLinkedHashMap() 
+	public MyHashTable(int numBuckets) 
 	
 	{
-		this.numBuckets=10;
+		this.numBuckets=numBuckets;
 		this.myBucketArray=new ArrayList<>(numBuckets);
 		
 		for(int index=0;index<numBuckets;index++)

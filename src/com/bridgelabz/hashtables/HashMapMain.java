@@ -26,6 +26,8 @@ public class HashMapMain {
 			
 		}
 		
+		myHashMap.add(null,1);
+		
 		System.out.println(myHashMap);
 		String keyToGetFrequency="to";
 		Integer frequency = myHashMap.get(keyToGetFrequency);
